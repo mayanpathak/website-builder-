@@ -88,6 +88,10 @@ VITE_PRODUCTION=true
 1. **TypeScript Errors**: If you encounter TypeScript errors during build:
    - Ensure you have the correct types installed (@types/node, @types/express, @types/cors)
    - Check your tsconfig.json for proper configuration
+   - If you see `Cannot find type definition file for 'node'` despite having @types/node installed and configured in tsconfig.json, try these steps:
+     1. Clean the TypeScript build cache: `npm run build -- --clean`
+     2. Reinstall @types/node: `npm install @types/node --save-dev`
+     3. Rebuild the project: `npm run build`
 
 2. **Module Not Found Errors**: If modules can't be found:
    - Make sure all dependencies are correctly listed in package.json
