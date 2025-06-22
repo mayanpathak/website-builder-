@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { callGemini } from '../services/ai.service';
 import { getSystemPrompt } from '../prompts';
 import { AIMessage, ChatResponse, ErrorResponse } from '../types';
@@ -6,7 +6,7 @@ import { AIMessage, ChatResponse, ErrorResponse } from '../types';
 const router = Router();
 
 // Chat endpoint
-router.post('/', async (req, res) => {
+router.post('/', async (req: Request, res: Response) => {
   const userMessages = req.body.messages as any[];
 
   try {
@@ -30,4 +30,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export default router; 
+export default router;

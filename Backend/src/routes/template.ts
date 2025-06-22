@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import { callGemini } from '../services/ai.service';
 import { BASE_PROMPT } from '../prompts';
 import { basePrompt as nodeBasePrompt } from '../defaults/node';
@@ -8,7 +8,7 @@ import { AIMessage, ErrorResponse, TemplateResponse } from '../types';
 const router = Router();
 
 // Detect if project is node or react
-router.post('/', async (req, res) => {
+router.post('/', async (req: Request, res: Response) => {
   const prompt = req.body.prompt as string;
 
   const messages: AIMessage[] = [
@@ -50,4 +50,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export default router; 
+export default router;
