@@ -23,6 +23,8 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.17"
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^2.0.0",
+    "typescript": "^5.8.3"
   }
 }
