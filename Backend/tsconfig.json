@@ -5,7 +5,7 @@
       "@/*": ["./src/*"]
     },
     "target": "es2019",
-    "lib": ["es2019"],
+    "lib": ["es2019", "dom"],
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -19,7 +19,7 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "typeRoots": ["./node_modules/@types"]
+    "types": ["node"]
   },
   "include": [
     "src/**/*"
