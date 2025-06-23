@@ -1,5 +1,5 @@
 // Use environment variable or fallback to localhost for development
-export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+export const BACKEND_URL = import.meta.env.VITE_BACKEND_URL ||"https://website-builder-ddjp.onrender.com"|| "http://localhost:3000";
 
 // Ensure API_URL is consistent with BACKEND_URL
 export const API_URL = BACKEND_URL;
